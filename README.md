@@ -1,4 +1,24 @@
-# Getting Started with Create React App
+# Todo-list in React
+
+Hark, dear reader, and lend thy ear!
+Forsooth, I present to thee a project most dear.
+In this endeavor, I have learned to wield
+The powers of React, a mighty technology to yield.
+
+A "To-Do List" did I bring, ere this project began
+In vanilla JS, it was formed by my hand.
+But lo, I transferred it to React's fair domain
+A task most daunting, but one that was not in vain.
+
+So, gentle reader, if it please thee
+Take a moment to peruse this work of mine, I pray thee.
+And if thou findest it worthy of acclaim
+Leave thy feedback, thy comments and thy name.
+
+Thus, with a humble heart and a grateful mind
+I bid thee farewell, and leave thee to unwind.
+
+PS: That was GPT in Shakespeare style ;)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
