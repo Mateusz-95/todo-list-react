@@ -22,6 +22,9 @@ PS: That was GPT in Shakespeare style ;)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Demo 
+https://mateusz-95.github.io/todo-list-react/
+
 ## Available Scripts
 
 In the project directory, you can run:
