@@ -1,22 +1,22 @@
 # Todo-list in React
 
-Hark, dear reader, and lend thy ear!
-Forsooth, I present to thee a project most dear.
-In this endeavor, I have learned to wield
-The powers of React, a mighty technology to yield.
+Hark, dear reader, and lend thy ear! <br>
+Forsooth, I present to thee a project most dear. <br>
+In this endeavor, I have learned to wield <br>
+The powers of React, a mighty technology to yield. <br>
 
-A "To-Do List" did I bring, ere this project began
-In vanilla JS, it was formed by my hand.
-But lo, I transferred it to React's fair domain
-A task most daunting, but one that was not in vain.
+A "To-Do List" did I bring, ere this project began <br>
+In vanilla JS, it was formed by my hand. <br>
+But lo, I transferred it to React's fair domain <br>
+A task most daunting, but one that was not in vain. <br>
 
-So, gentle reader, if it please thee
-Take a moment to peruse this work of mine, I pray thee.
-And if thou findest it worthy of acclaim
-Leave thy feedback, thy comments and thy name.
+So, gentle reader, if it please thee <br>
+Take a moment to peruse this work of mine, I pray thee. <br>
+And if thou findest it worthy of acclaim <br>
+Leave thy feedback, thy comments and thy name. <br>
 
-Thus, with a humble heart and a grateful mind
-I bid thee farewell, and leave thee to unwind.
+Thus, with a humble heart and a grateful mind <br>
+I bid thee farewell, and leave thee to unwind. <br>
 
 PS: That was GPT in Shakespeare style ;)
 
