@@ -25,6 +25,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Demo 
 https://mateusz-95.github.io/todo-list-react/
 
+![print screen from todo-list] (https://raw.githubusercontent.com/Mateusz-95/todo-list-react/main/public/printscreen.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
