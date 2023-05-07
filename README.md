@@ -1,4 +1,5 @@
 # Todo-list in React
+! [print screen from todo-list] (https://raw.githubusercontent.com/Mateusz-95/todo-list-react/main/public/printscreen.png)
 
 Hark, dear reader, and lend thy ear! <br>
 Forsooth, I present to thee a project most dear. <br>
@@ -24,8 +25,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Demo 
 https://mateusz-95.github.io/todo-list-react/
-
-![print screen from todo-list] (https://raw.githubusercontent.com/Mateusz-95/todo-list-react/main/public/printscreen.png)
 
 ## Available Scripts
 
