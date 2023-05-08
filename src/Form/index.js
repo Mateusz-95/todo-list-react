@@ -1,6 +1,5 @@
 import "./style.css";
 
-
 const Form = () => (
     <form className="form">
         <input placeholder="Co jest do zrobienia?" className="form__input" />

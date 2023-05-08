@@ -1,10 +1,10 @@
-.section__buttonsContainer {
+.buttons {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.section__button {
+.buttons__button {
     border: none;
     background-color: #ffffff;
     color: hsl(180, 100%, 25%);
@@ -12,24 +12,24 @@
     cursor: pointer;
 }
 
-.section__button:hover {
+.buttons__button:hover {
     color: hsl(180, 100%, 35%);
 }
 
-.section__button:active {
+.buttons__button:active {
     color: hsl(180, 100%, 40%);
 }
 
-.section__button:disabled {
+.buttons__button:disabled {
     color: #ccc;
 }
 
 @media (max-width: 767px) {
-    .section__buttonsContainer {
+    .buttons {
         flex-direction: column;
     }
 
-    .section__button {
+    .buttons__button {
         padding: 10px;
     }
 }
