@@ -1,5 +1,4 @@
-import { useState } from "react";
-import logo from './logo.svg';
+import { useState } from "react"; 
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -7,13 +6,16 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
-const tasks = [
-  { id: 1, content: "Przejść na Reacta", done: true },
-  { id: 2, content: "Zjeść obiad", done: false },
-];
-
 function App() {
   const [hideDone, setHideDone] = useState(false);
+  const [tasks, setTasks] = useState([
+    { id: 1, content: "Przejść na Reacta", done: true },
+    { id: 2, content: "Zjeść obiad", done: false },
+  ]);
+
+  const removeTask = (id) => {
+    setTasks(tasks => tasks.filter(task => task.id !== id));
+  };
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
@@ -37,7 +39,13 @@ function App() {
             toggleHideDone={toggleHideDone}
           />
         }
-        body={<Tasks tasks={tasks} hideDone={hideDone} />}
+        body={
+          <Tasks
+            tasks={tasks}
+            hideDone={hideDone}
+            removeTask={removeTask}
+          />
+        }
       />
     </Container>
   )
