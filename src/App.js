@@ -1,4 +1,4 @@
-import { useState } from "react"; 
+import { useState } from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -21,6 +21,15 @@ function App() {
     setHideDone(hideDone => !hideDone);
   };
 
+  const toggleTaskDone = (id) => {
+    setTasks(tasks => tasks.map(task => {
+      if (task.id === id) {
+        return { ...task, done: !task.done };
+      }
+      return task;
+    }))
+  };
+
   return (
     <Container>
       <Header
@@ -41,6 +50,7 @@ function App() {
         }
         body={
           <Tasks
+            toggleTaskDone={toggleTaskDone}
             tasks={tasks}
             hideDone={hideDone}
             removeTask={removeTask}
