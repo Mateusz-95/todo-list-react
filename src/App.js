@@ -7,65 +7,57 @@ import Header from "./Header";
 import Container from "./Container";
 
 function App() {
-  const storedTasks = JSON.parse(localStorage.getItem("storedTasks"));
-  const initialTasks = storedTasks !== null ? storedTasks : [];
-
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState(initialTasks);
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("storedTasks")) || []
+  );
 
   useEffect(() => {
     localStorage.setItem("storedTasks", JSON.stringify(tasks));
   }, [tasks]);
 
   const removeTask = (id) => {
-    setTasks(tasks => tasks.filter(task => task.id !== id));
+    setTasks((tasks) => tasks.filter((task) => task.id !== id));
   };
 
   const toggleHideDone = () => {
-    setHideDone(hideDone => !hideDone);
+    setHideDone((hideDone) => !hideDone);
   };
 
   const toggleTaskDone = (id) => {
-    setTasks(tasks => tasks.map(task => {
-      if (task.id === id) {
-        return { ...task, done: !task.done };
-      }
-      return task;
-    }))
+    setTasks((tasks) =>
+      tasks.map((task) =>
+        task.id === id ? { ...task, done: !task.done } : task
+      )
+    );
   };
 
   const doneAllTasks = () => {
-    setTasks(tasks => tasks.map(task => ({
-      ...task,
-      done: true
-    })))
+    setTasks((tasks) =>
+      tasks.map((task) => ({
+        ...task,
+        done: true,
+      }))
+    );
   };
 
   const addNewTask = (content) => {
-    if (content === "") {
-      return;
-    }
-
-    setTasks(tasks => [...tasks,
-    {
-      content,
-      done: false,
-      id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
-    }])
+    setTasks((tasks) => [
+      ...tasks,
+      {
+        content,
+        done: false,
+        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
+      },
+    ]);
   };
 
   return (
     <Container>
-      <Header
-        title="Lista zadań"
-      />
+      <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
-        body={
-          <Form
-            addNewTask={addNewTask}
-          />
-        }
+        body={<Form addNewTask={addNewTask} />}
       />
       <Section
         title="Lista zadań"
@@ -87,8 +79,7 @@ function App() {
         }
       />
     </Container>
-  )
-};
-
+  );
+}
 
 export default App;
