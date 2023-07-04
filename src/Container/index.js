@@ -1,9 +1,5 @@
-import "./style.css";
+import { AppContainer } from "./styled";
 
-const Container = ({ children }) => (
-    <div className="container">
-        {children}
-    </div>
-);
+const Container = ({ children }) => <AppContainer>{children}</AppContainer>;
 
 export default Container;
