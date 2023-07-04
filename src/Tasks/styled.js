@@ -24,3 +24,5 @@ export const Content = styled.div`
       text-decoration: line-through;
     `}
 `;
+
+export const Button = styled.button``;
