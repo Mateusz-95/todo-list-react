@@ -5,6 +5,8 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
+import { StyleSheetManager } from "styled-components";
+import isPropValid from "@emotion/is-prop-valid";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
@@ -53,32 +55,36 @@ function App() {
   };
 
   return (
-    <Container>
-      <Header title="Lista zadań" />
-      <Section
-        title="Dodaj nowe zadanie"
-        body={<Form addNewTask={addNewTask} />}
-      />
-      <Section
-        title="Lista zadań"
-        extraHeaderContent={
-          <Buttons
-            tasks={tasks}
-            hideDone={hideDone}
-            toggleHideDone={toggleHideDone}
-            doneAllTasks={doneAllTasks}
+    <StyleSheetManager shouldForwardProp={(prop) => isPropValid(prop)}>
+      {
+        <Container>
+          <Header title="Lista zadań" />
+          <Section
+            title="Dodaj nowe zadanie"
+            body={<Form addNewTask={addNewTask} />}
           />
-        }
-        body={
-          <Tasks
-            toggleTaskDone={toggleTaskDone}
-            tasks={tasks}
-            hideDone={hideDone}
-            removeTask={removeTask}
+          <Section
+            title="Lista zadań"
+            extraHeaderContent={
+              <Buttons
+                tasks={tasks}
+                hideDone={hideDone}
+                toggleHideDone={toggleHideDone}
+                doneAllTasks={doneAllTasks}
+              />
+            }
+            body={
+              <Tasks
+                toggleTaskDone={toggleTaskDone}
+                tasks={tasks}
+                hideDone={hideDone}
+                removeTask={removeTask}
+              />
+            }
           />
-        }
-      />
-    </Container>
+        </Container>
+      }
+    </StyleSheetManager>
   );
 }
 
