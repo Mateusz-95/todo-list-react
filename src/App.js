@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -10,14 +9,15 @@ import isPropValid from "@emotion/is-prop-valid";
 import { useTasks } from "./useTasks";
 
 function App() {
-  const { tasks, removeTask, toggleTaskDone, doneAllTasks, addNewTask } =
-    useTasks();
-
-  const [hideDone, setHideDone] = useState(false);
-
-  const toggleHideDone = () => {
-    setHideDone((hideDone) => !hideDone);
-  };
+  const {
+    tasks,
+    removeTask,
+    toggleTaskDone,
+    doneAllTasks,
+    addNewTask,
+    hideDone,
+    toggleHideDone,
+  } = useTasks();
 
   return (
     <StyleSheetManager shouldForwardProp={(prop) => isPropValid(prop)}>
