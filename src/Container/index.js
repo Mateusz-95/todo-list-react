@@ -1,5 +1,7 @@
-import { AppContainer } from "./styled";
+import styled from "styled-components";
 
-const Container = ({ children }) => <AppContainer>{children}</AppContainer>;
-
-export default Container;
+export const Container = styled.div`
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+`;
