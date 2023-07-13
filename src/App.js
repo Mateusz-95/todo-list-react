@@ -12,32 +12,32 @@ import {
 import isPropValid from "@emotion/is-prop-valid";
 import { useTasks } from "./useTasks";
 
-function App() {
-  const theme = {
-    colors: {
-      normal: "hsl(180, 100%, 25%)",
-      hover: "hsl(180, 100%, 35%)",
-      active: "hsl(180, 100%, 40%)",
-    },
-  };
+const theme = {
+  colors: {
+    normal: "hsl(180, 100%, 25%)",
+    hover: "hsl(180, 100%, 35%)",
+    active: "hsl(180, 100%, 40%)",
+  },
+};
 
-  const GlobalStyles = createGlobalStyle`
-  html {
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+const GlobalStyles = createGlobalStyle`
+html {
+box-sizing: border-box;
+font-family: 'Lato', sans-serif;
 }
 
 *,
 ::after,
 ::before {
-  box-sizing: inherit;
+box-sizing: inherit;
 }
 
 body {
-  background-color: #f0f0f0;
+background-color: #f0f0f0;
 }
-  `;
+`;
 
+function App() {
   const {
     tasks,
     removeTask,
