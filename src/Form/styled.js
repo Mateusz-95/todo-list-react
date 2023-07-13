@@ -22,18 +22,18 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   color: #dbfaf6;
-  background-color: hsl(180, 100%, 25%);
+  background-color: ${({ theme }) => theme.colors.normal};
   border: none;
   padding: 10px;
   transition: background 0.5s, transform 0.5s;
   cursor: pointer;
 
   &:hover {
-    background-color: hsl(180, 100%, 30%);
+    background-color: ${({ theme }) => theme.colors.hover};
     transform: scale(1.15);
   }
 
   &:active {
-    background-color: hsl(180, 100%, 35%);
+    background-color: ${({ theme }) => theme.colors.active};
   }
 `;

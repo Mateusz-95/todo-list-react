@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const ButtonsContainer = styled.div`
   display: flex;
@@ -13,16 +13,16 @@ export const ButtonsContainer = styled.div`
 export const Button = styled.button`
   border: none;
   background-color: #ffffff;
-  color: hsl(180, 100%, 25%);
+  color: ${({ theme }) => theme.colors.normal};
   transition: color 0.5s;
   cursor: pointer;
 
   &:hover {
-    color: hsl(180, 100%, 35%);
+    color: ${({ theme }) => theme.colors.hover};
   }
 
   &:active {
-    color: hsl(180, 100%, 40%);
+    color: ${({ theme }) => theme.colors.active};
   }
 
   &:disabled {

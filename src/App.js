@@ -4,11 +4,40 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
-import { StyleSheetManager } from "styled-components";
+import {
+  StyleSheetManager,
+  ThemeProvider,
+  createGlobalStyle,
+} from "styled-components";
 import isPropValid from "@emotion/is-prop-valid";
 import { useTasks } from "./useTasks";
 
 function App() {
+  const theme = {
+    colors: {
+      normal: "hsl(180, 100%, 25%)",
+      hover: "hsl(180, 100%, 35%)",
+      active: "hsl(180, 100%, 40%)",
+    },
+  };
+
+  const GlobalStyles = createGlobalStyle`
+  html {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+  `;
+
   const {
     tasks,
     removeTask,
@@ -20,8 +49,9 @@ function App() {
   } = useTasks();
 
   return (
-    <StyleSheetManager shouldForwardProp={(prop) => isPropValid(prop)}>
-      {
+    <ThemeProvider theme={theme}>
+      <StyleSheetManager shouldForwardProp={(prop) => isPropValid(prop)}>
+        <GlobalStyles />
         <Container>
           <Header title="Lista zadań" />
           <Section
@@ -48,8 +78,8 @@ function App() {
             }
           />
         </Container>
-      }
-    </StyleSheetManager>
+      </StyleSheetManager>
+    </ThemeProvider>
   );
 }
 
