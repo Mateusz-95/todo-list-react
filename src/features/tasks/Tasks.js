@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import Form from "./Form";
 import TasksList from "./TasksList";
 import Buttons from "./Buttons";
@@ -11,6 +12,7 @@ import {
 } from "styled-components";
 import isPropValid from "@emotion/is-prop-valid";
 import { useTasks } from "../../useTasks";
+import { selectTasks } from "./tasksSlice";
 
 const theme = {
   colors: {
@@ -38,8 +40,9 @@ background-color: #f0f0f0;
 `;
 
 function Tasks() {
+  const { tasks } = useSelector(selectTasks);
+
   const {
-    tasks,
     removeTask,
     toggleTaskDone,
     doneAllTasks,
