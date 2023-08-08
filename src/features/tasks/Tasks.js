@@ -42,7 +42,7 @@ background-color: #f0f0f0;
 function Tasks() {
   const { tasks } = useSelector(selectTasks);
 
-  const { removeTask, doneAllTasks, addNewTask } = useTasks();
+  const { removeTask, addNewTask } = useTasks();
 
   return (
     <ThemeProvider theme={theme}>
