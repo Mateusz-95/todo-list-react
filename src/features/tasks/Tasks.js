@@ -42,14 +42,7 @@ background-color: #f0f0f0;
 function Tasks() {
   const { tasks } = useSelector(selectTasks);
 
-  const {
-    removeTask,
-    toggleTaskDone,
-    doneAllTasks,
-    addNewTask,
-    hideDone,
-    toggleHideDone,
-  } = useTasks();
+  const { removeTask, doneAllTasks, addNewTask } = useTasks();
 
   return (
     <ThemeProvider theme={theme}>
@@ -63,22 +56,8 @@ function Tasks() {
           />
           <Section
             title="Lista zadań"
-            extraHeaderContent={
-              <Buttons
-                tasks={tasks}
-                hideDone={hideDone}
-                toggleHideDone={toggleHideDone}
-                doneAllTasks={doneAllTasks}
-              />
-            }
-            body={
-              <TasksList
-                toggleTaskDone={toggleTaskDone}
-                tasks={tasks}
-                hideDone={hideDone}
-                removeTask={removeTask}
-              />
-            }
+            extraHeaderContent={<Buttons />}
+            body={<TasksList tasks={tasks} removeTask={removeTask} />}
           />
         </Container>
       </StyleSheetManager>
