@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux";
 import Form from "./Form";
 import TasksList from "./TasksList";
 import Buttons from "./Buttons";
@@ -11,8 +10,6 @@ import {
   createGlobalStyle,
 } from "styled-components";
 import isPropValid from "@emotion/is-prop-valid";
-import { useTasks } from "../../useTasks";
-import { selectTasks } from "./tasksSlice";
 
 const theme = {
   colors: {
@@ -40,24 +37,17 @@ background-color: #f0f0f0;
 `;
 
 function Tasks() {
-  const { tasks } = useSelector(selectTasks);
-
-  const { removeTask, addNewTask } = useTasks();
-
   return (
     <ThemeProvider theme={theme}>
       <StyleSheetManager shouldForwardProp={(prop) => isPropValid(prop)}>
         <GlobalStyles />
         <Container>
           <Header title="Lista zadań" />
-          <Section
-            title="Dodaj nowe zadanie"
-            body={<Form addNewTask={addNewTask} />}
-          />
+          <Section title="Dodaj nowe zadanie" body={<Form />} />
           <Section
             title="Lista zadań"
             extraHeaderContent={<Buttons />}
-            body={<TasksList tasks={tasks} removeTask={removeTask} />}
+            body={<TasksList />}
           />
         </Container>
       </StyleSheetManager>
