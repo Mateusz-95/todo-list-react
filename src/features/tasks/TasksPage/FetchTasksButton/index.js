@@ -1,4 +1,4 @@
-import { Button } from "../../TasksPage/Buttons/styled";
+import { Button } from "../../styledForButtons/styled";
 import { fetchExampleTasks } from "../../tasksSlice";
 import { useDispatch } from "react-redux";
 

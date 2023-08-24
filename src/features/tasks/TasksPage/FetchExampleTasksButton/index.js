@@ -1,3 +1,0 @@
-const fetchExampleTasksButton = () => {
-  return <></>;
-};
