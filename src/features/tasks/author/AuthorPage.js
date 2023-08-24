@@ -19,11 +19,11 @@ export default () => (
               {" "}
               <p>
                 Jestem wokalistą, gitarzystą i <i>aranżerem</i>. Skończyłem
-                studia na
+                studia na&nbsp;
                 <strong>
                   Uniwersytecie Muzycznym Fryderyka Chopina w Warszawie
                 </strong>{" "}
-                i
+                i&nbsp;
                 <strong>
                   Akademii Muzycznej im. I. J. Paderewskiego w Poznaniu.
                 </strong>
