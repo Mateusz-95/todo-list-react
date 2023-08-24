@@ -5,10 +5,13 @@ import {
   fetchExampleTasks,
   selectTasksState,
   setTasks,
+  startLoading,
 } from "../../tasksSlice";
 
 function* fetchExampleTasksHandler() {
   try {
+    yield put(startLoading());
+    yield call(() => new Promise((resolve) => setTimeout(resolve, 1000)));
     const exampleTasks = yield call(getExampleTasks);
     yield put(setTasks(exampleTasks));
   } catch (error) {
