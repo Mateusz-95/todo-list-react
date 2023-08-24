@@ -9,8 +9,6 @@ export const ContentSection = styled.section`
 export const Header = styled.div`
   padding: 20px;
   border-bottom: 2px solid #e1e1e1;
-  display: grid;
-  grid-template-columns: auto 300px;
 
   @media (max-width: 767px) {
     grid-template-columns: auto;
