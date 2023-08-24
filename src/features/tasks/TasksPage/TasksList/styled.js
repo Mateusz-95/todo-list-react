@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 export const List = styled.ul`
@@ -61,4 +62,19 @@ export const Button = styled.button`
       justify-content: center;
       background-color: #ffffff;
     `}
+`;
+
+export const ContentLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.normal};
+  transition: color 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.hover};
+  }
+
+  &:active {
+    color: ${({ theme }) => theme.colors.active};
+  }
 `;
