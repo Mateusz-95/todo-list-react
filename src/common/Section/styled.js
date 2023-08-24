@@ -27,3 +27,9 @@ export const Header = styled.div`
 export const Body = styled.div`
   padding: 20px;
 `;
+
+export const ContentContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;

@@ -11,6 +11,7 @@ import Buttons from "./Buttons";
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import { Container } from "../../../common/Container";
+import FetchTasksButton from "../TaskPage/FetchTasksButton";
 
 export const theme = {
   colors: {
@@ -44,7 +45,11 @@ function TasksPage() {
         <GlobalStyles />
         <Container>
           <Header title="Lista zadań" />
-          <Section title="Dodaj nowe zadanie" body={<Form />} />
+          <Section
+            title="Dodaj nowe zadanie"
+            extraHeaderContent={<FetchTasksButton />}
+            body={<Form />}
+          />
           <Section title="Wyszukiwarka" body={<Search />} />
           <Section
             title="Lista zadań"
