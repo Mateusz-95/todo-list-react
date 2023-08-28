@@ -6,13 +6,14 @@ import {
   selectHideDone,
   selectTasksByQuery,
 } from "../../tasksSlice";
-import { useLocation } from "react-router-dom";
+import { useQueryParameter } from "../../../../queryParameters";
+
 import { ThemeProvider } from "styled-components";
 import { theme } from "../../TaskPage";
+import { seatchQueryParamName } from "../../../../searchQueryParamName";
 
 const TasksList = () => {
-  const location = useLocation();
-  const query = new URLSearchParams(location.search).get("szukaj");
+  const query = useQueryParameter(seatchQueryParamName);
 
   const hideDone = useSelector(selectHideDone);
 
