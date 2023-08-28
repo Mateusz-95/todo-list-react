@@ -10,10 +10,10 @@ import { useQueryParameter } from "../../../../queryParameters";
 
 import { ThemeProvider } from "styled-components";
 import { theme } from "../../TaskPage";
-import { seatchQueryParamName } from "../../../../searchQueryParamName";
+import { searchQueryParamName } from "../../../../searchQueryParamName";
 
 const TasksList = () => {
-  const query = useQueryParameter(seatchQueryParamName);
+  const query = useQueryParameter(searchQueryParamName);
 
   const hideDone = useSelector(selectHideDone);
 

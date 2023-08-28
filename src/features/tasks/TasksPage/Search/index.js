@@ -1,13 +1,19 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { useHistory, useLocation } from "react-router-dom";
+import { useQueryParameter } from "../../../../queryParameters";
+import { searchQueryParamName } from "../../../../searchQueryParamName";
 import { Input } from "../Form/styled";
 import { Wrapper } from "./styled";
 
 export default () => {
   const location = useLocation();
+
   const history = useHistory();
-  const query = new URLSearchParams(location.search).get("szukaj");
+
+  const query = useQueryParameter(searchQueryParamName);
+
   const inputRef = useRef(null);
+
   const onInputChange = ({ target }) => {
     const searchParams = new URLSearchParams(location.search);
 
