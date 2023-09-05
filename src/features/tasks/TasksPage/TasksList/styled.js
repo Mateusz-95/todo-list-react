@@ -9,7 +9,8 @@ export const List = styled.ul`
 export const Item = styled.li`
   border-bottom: 2px solid #e9e9e9;
   padding: 10px;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
 
   ${({ hidden }) =>
     hidden &&
@@ -19,6 +20,7 @@ export const Item = styled.li`
 `;
 
 export const Content = styled.div`
+  justify-self: center;
   ${({ done }) =>
     done &&
     css`
@@ -45,9 +47,6 @@ export const Button = styled.button`
       margin: 0 10px 0 10px;
       padding: 0;
       border: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       background-color: #ffffff;
     `}
 
@@ -57,9 +56,6 @@ export const Button = styled.button`
       margin: 0 0 0 auto;
       border: none;
       padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       background-color: #ffffff;
     `}
 `;
