@@ -1,7 +1,7 @@
 import React from "react";
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import TasksPage from "./features/tasks/TasksPage";
-import AuthorPage from "./features/tasks/author/AuthorPage";
+import AuthorPage from "./features/tasks/AuthorPage";
 import TaskPage from "./features/tasks/TaskPage";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";

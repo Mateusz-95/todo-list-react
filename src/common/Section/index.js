@@ -5,7 +5,6 @@ const Section = ({ title, body, extraHeaderContent }) => (
     <Header buttons>
       <ContentContainer>
         <div>
-          {" "}
           <h2>{title}</h2>
         </div>
         <div>{extraHeaderContent}</div>
