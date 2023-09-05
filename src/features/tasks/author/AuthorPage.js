@@ -4,7 +4,8 @@ import isPropValid from "@emotion/is-prop-valid";
 import { Container } from "../../../common/Container";
 import Header from "../../../common/Header";
 import Section from "../../../common/Section";
-import { theme, GlobalStyles } from "../TasksPage";
+import { GlobalStyles } from "../../../globalStyles";
+import { theme } from "../../../theme";
 
 export default () => (
   <ThemeProvider theme={theme}>

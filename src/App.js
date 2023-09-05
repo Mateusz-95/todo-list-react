@@ -5,7 +5,7 @@ import AuthorPage from "./features/tasks/author/AuthorPage";
 import TaskPage from "./features/tasks/TaskPage";
 import { NavList, StyledNavLink, NavListItem } from "./styled";
 import { ThemeProvider } from "styled-components";
-import { theme } from "./features/tasks/TasksPage";
+import { theme } from "./theme";
 
 export const App = () => {
   return (
