@@ -9,13 +9,14 @@ export const useReplaceQueryParameter = () => {
   const location = useLocation();
   const history = useHistory();
   return ({ key, value }) => {
-    const query = new URLSearchParams(location.search);
+    const searchParams = new URLSearchParams(location.search);
 
-    query.set(key, value);
     if (value === "") {
-      history.push(location.pathname);
+      searchParams.delete(key);
     } else {
-      history.push(`${location.pathname}?${query.toString()}`);
+      searchParams.set(key, value);
     }
+
+    history.push(`${location.pathname}?${searchParams.toString()}`);
   };
 };
